@@ -13,7 +13,7 @@
     "require": {
         "php": ">=5.4.0",
         "guzzlehttp/guzzle": "~4|~5",
-        "guzzlehttp/oauth-subscriber": "0.1.*"
+        "guzzlehttp/oauth-subscriber": "0.2.*"
     },
     "require-dev": {
         "illuminate/support": "4.*",
