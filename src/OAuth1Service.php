@@ -65,7 +65,6 @@ class OAuth1Service extends Service implements OAuth1ServiceInterface
             'consumer_key'    => $this->credentials['client_id'],
             'consumer_secret' => $this->credentials['client_secret'],
             'token'           => $oauthToken,
-            'token_secret'    => $this->token['oauth_token_secret'],
         ]);
 
         $body = ['oauth_verifier' => $oauthVerifier];
