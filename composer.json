@@ -1,10 +1,10 @@
 {
-    "name": "hannesvdvreken/php-oauth",
+    "name": "diginedbv/php-oauth",
     "description": "PHP OAuth services",
     "authors": [
         {
-            "name": "Hannes Van De Vreken",
-            "email": "vandevreken.hannes@gmail.com"
+            "name": "Digined BV",
+            "email": "tech@digined.com"
         }
     ],
     "keywords": ["OAuth1.0a", "OAuth2", "Facebook", "Twitter", "Google", "Github"],
