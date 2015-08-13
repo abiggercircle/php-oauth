@@ -32,15 +32,16 @@ class Manager
     {
         // use scope from config if not provided
         if (is_null($scopes)) {
-            $scopes = $this->app['config']->get('php-oauth::oauth.consumers.'. $service .'.scopes', []);
+            $scopes = config('soda-oauth.consumers.'. $service. ".scopes", []);
         }
 
         // Default redirect URI.
         $redirectUri = $redirectUri ?: $this->app['url']->current();
 
         // Get the credentials.
+
         $credentials = array_only(
-            $this->app['config']->get('php-oauth::oauth.consumers.'. $service),
+            config('soda-oauth.consumers.'. $service),
             ['client_id', 'client_secret']
         );
 

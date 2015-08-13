@@ -11,7 +11,8 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
-        $this->package('hannesvdvreken/php-oauth');
+        $configPath = __DIR__ . '/../config/oauth.php';
+        $this->publishes([$configPath => config_path('soda-oauth.php')], 'config');
     }
 
     /**
@@ -19,12 +20,6 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        // Register the config file:
-        $this->app['config']->package('hannesvdvreken/php-oauth', __DIR__ .'/../config');
-
-        // bind object for OAuth Facade
-        $this->app->bind('oauth', function ($app) {
-            return $app->make('OAuth\Support\Manager');
-        });
+        app()->bind('oauth', 'OAuth\Support\Manager');
     }
 }

@@ -16,7 +16,7 @@
         "guzzlehttp/oauth-subscriber": "0.2.*"
     },
     "require-dev": {
-        "illuminate/support": "4.*",
+        "illuminate/support": "~5.*",
         "mockery/mockery": "0.9.*",
         "satooshi/php-coveralls": "0.6.*"
     },
